@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_01_변수" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1844.8,1384.8" sap2010:WorkflowViewState.IdRef="_01_변수_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_01_변수" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="548,1457" sap2010:WorkflowViewState.IdRef="_01_변수_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -88,7 +88,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;변수 생성 방법&gt;&#xA;1. Ctrl +K&#xA;2. 하단의 변수 패널에서 생성&#xA;&#xA;&lt;변수 생성 시 확인사항&gt;&#xA;1. 이름 - 공백없이&#xA;2. 변수의 데이터타입&#xA;3. 변수 사용 범위" DisplayName="_01_변수" sap:VirtualizedContainerService.HintSize="558.4,1320" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;변수 생성 방법&gt;&#xA;1. Ctrl +K&#xA;2. 하단의 변수 패널에서 생성&#xA;&#xA;&lt;변수 생성 시 확인사항&gt;&#xA;1. 이름 - 공백없이&#xA;2. 변수의 데이터타입&#xA;3. 변수 사용 범위" DisplayName="_01_변수" sap:VirtualizedContainerService.HintSize="558,1392" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_인사" />
       <Variable x:TypeArguments="x:String" Name="str_날짜" />
@@ -103,7 +103,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="558.4,928.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -157,7 +157,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="512,165.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
@@ -225,14 +225,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="str_날짜 = &quot;2024-05-20&quot;&#xA;출력&gt; 오늘은 2024년05월20일 입니다." sap:VirtualizedContainerService.HintSize="496,977.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap2010:Annotation.AnnotationText="str_날짜 = &quot;2024-05-20&quot;&#xA;출력&gt; 오늘은 2024년05월20일 입니다." sap:VirtualizedContainerService.HintSize="496,1058" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_7">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[str_날짜]</OutArgument>
         </Assign.To>
@@ -240,8 +240,8 @@
           <InArgument x:TypeArguments="x:String">[Today.ToString("yyyy-MM-dd")]</InArgument>
         </Assign.Value>
       </Assign>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;str_날짜 : &quot; + str_날짜]" />
-      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[&quot;str_날짜 : &quot; + str_날짜]" />
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_8">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[str_ko]</OutArgument>
         </Assign.To>
@@ -249,17 +249,28 @@
           <InArgument x:TypeArguments="x:String">[Today.ToString("yyyy년MM월dd일")]</InArgument>
         </Assign.Value>
       </Assign>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;str_ko : &quot; + str_ko]" />
-      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[&quot;str_ko : &quot; + str_ko]" />
+      <Assign sap2010:Annotation.AnnotationText="// DateTime.Now : 현재 날짜와 시간을 포함하여 정확한 시각 정보 리턴&#xD;&#xA;// DateTime.Today : 현재 날짜만 유효하고 시간은 00:00:00으로 리턴" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="Assign_9">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[dayOfWeek]</OutArgument>
         </Assign.To>
         <Assign.Value>
           <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("dddd", new System.Globalization.CultureInfo("ko-KR"))]</InArgument>
         </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </Assign>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;dayOfWeek : &quot; + dayOfWeek]" />
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;오늘은 &quot; + str_ko + &quot; &quot; + dayOfWeek + &quot; 입니다.&quot;]" />
+      <WriteLine sap2010:Annotation.AnnotationText="// &quot;dddd&quot; : 요일의 형식을 나타내는 형식 문자열&#xD;&#xA;// CultureInfo : 날짜 시간 형식 지정시 사용할 문화권" DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[&quot;dayOfWeek : &quot; + dayOfWeek]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </WriteLine>
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;오늘은 &quot; + str_ko + &quot; &quot; + dayOfWeek + &quot; 입니다.&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>
