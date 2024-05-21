@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_01_변수_실습" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="947,1537" sap2010:WorkflowViewState.IdRef="_01_변수_실습_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_01_변수_실습" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1058,1537" sap2010:WorkflowViewState.IdRef="_01_변수_실습_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -101,6 +101,11 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
   <Sequence sap2010:Annotation.AnnotationText="arr도시목록 = {&quot;서울의 날씨&quot;, &quot;부산의 날씨&quot;, &quot;대전의 날씨&quot;}&#xD;&#xA;&#xD;&#xA;반복문을 사용하여, 배열의 아이템을 검색한 후, 추출한 날씨 정보를 추출한다.&#xD;&#xA;&#xD;&#xA;&gt; 서울의 날씨는 00도 입니다.&#xD;&#xA;&gt; 부산의 날씨는 00도 입니다.&#xD;&#xA;&gt; 대전의 날씨는 00도 입니다." DisplayName="02_브라우저_자동화_반복문" sap:VirtualizedContainerService.HintSize="608,1472" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arr도시목록" />
@@ -163,7 +168,7 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[city + &quot;는 &quot; + temp.Substring(5) + &quot; 입니다.&quot;]" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[city + &quot;는 &quot; + temp.Replace(&quot;현재 온도&quot;, &quot;&quot;).Replace(&quot;°&quot;, &quot;&quot;) + &quot;도 입니다.&quot;]" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
