@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome NAVER",
+  "Type": "App",
+  "Id": "ahmZ9Ij6bUSw9tTwGFuZ4w",
+  "Reference": "-iFxK8LYMUGC6U01RXj9HQ/ahmZ9Ij6bUSw9tTwGFuZ4w",
+  "Created": "2024-05-21T03:42:18.8751236Z",
+  "Updated": "2024-05-21T03:42:18.8751236Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.4.2.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
