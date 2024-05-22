@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_01_변수_실습" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1058,1537" sap2010:WorkflowViewState.IdRef="_01_변수_실습_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_01_변수_실습" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1191,1537" sap2010:WorkflowViewState.IdRef="_01_변수_실습_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -106,7 +106,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="arr도시목록 = {&quot;서울의 날씨&quot;, &quot;부산의 날씨&quot;, &quot;대전의 날씨&quot;}&#xD;&#xA;&#xD;&#xA;반복문을 사용하여, 배열의 아이템을 검색한 후, 추출한 날씨 정보를 추출한다.&#xD;&#xA;&#xD;&#xA;&gt; 서울의 날씨: 현재 온도는 00도 입니다.&#xD;&#xA;&gt; 부산의 날씨: 현재 온도는 00도 입니다.&#xD;&#xA;&gt; 대전의 날씨: 현재 온도는 00도 입니다." DisplayName="02_브라우저_자동화_반복문" sap:VirtualizedContainerService.HintSize="608,1472" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="arr도시목록 = {&quot;서울의 날씨&quot;, &quot;부산의 날씨&quot;, &quot;대전의 날씨&quot;}&#xA;&#xA;반복문을 사용하여, 배열의 아이템을 검색한 후, 추출한 날씨 정보를 추출한다.&#xA;&#xA;&gt; 서울의 날씨: 현재 온도는 00도 입니다.&#xA;&gt; 부산의 날씨: 현재 온도는 00도 입니다.&#xA;&gt; 대전의 날씨: 현재 온도는 00도 입니다." DisplayName="02_브라우저_자동화_반복문" sap:VirtualizedContainerService.HintSize="608,1472" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arr도시목록" />
       <Variable x:TypeArguments="x:Int32" Name="idx" />
@@ -130,7 +130,7 @@
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:String" Name="city" />
+            <DelegateInArgument x:TypeArguments="x:String" Name="current_city" />
           </ActivityAction.Argument>
           <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="512,966" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
@@ -152,7 +152,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT query'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c14e76e5-aba6-4402-bdba-50ba0e088675" Text="[city + &quot;[k(Enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT query'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c14e76e5-aba6-4402-bdba-50ba0e088675" Text="[current_city + &quot;[k(Enter)]&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.naver.com/" CVScreenId="ca3a6b32-439c-4f02-a8bd-381bea8245f2" CvElementArea="604, 196, 710, 65" CvType="InputBox" DesignTimeRectangle="674, 200, 480, 58" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='query' tag='INPUT' class='search_input' parentname='search' /&gt;" FuzzySelectorArgument="&lt;webctrl id='query' tag='INPUT' class='search_input' parentname='search' type='search' placeholder='검색어를 입력해 주세요.' aaname='검색어를 입력해 주세요.' /&gt;" Guid="b94cfba0-cfd8-4425-9583-9d4aa4ef7cde" InformativeScreenshot="ad66309863f05ebd2f66d2ce2b3ae4fb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*NAVER' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
@@ -168,7 +168,7 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="WriteLine_1" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[current_city +&quot;: &quot; + temp.ToString.Replace(&quot;현재 온도&quot;, &quot;현재 온도는 &quot;).Replace(&quot;°&quot;, &quot;&quot;) + &quot;도 입니다.&quot;]" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
