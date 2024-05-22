@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_02_브라우저_자동화" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="947,1746" sap2010:WorkflowViewState.IdRef="_02_브라우저_자동화_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_02_브라우저_자동화" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1134,1746" sap2010:WorkflowViewState.IdRef="_02_브라우저_자동화_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -101,7 +101,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_02_브라우저_자동화" sap:VirtualizedContainerService.HintSize="514,1681" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_02_브라우저_자동화_모던" sap:VirtualizedContainerService.HintSize="514,1681" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="extracted_temp" />
       <Variable x:TypeArguments="x:String" Name="str_temp" />
@@ -177,7 +177,7 @@
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable BrowserURL="https://search.naver.com/search.naver?where=nexearch&amp;sm=top_hty&amp;fbm=0&amp;ie=utf8&amp;query=%EC%84%9C%EC%9A%B8%EC%9D%98+%EB%82%A0%EC%94%A8" CVScreenId="46f21698-f948-4da5-a895-74348e3e2fcf" CvTextArea="681, 487, 138, 55" CvType="AnyWordGroup" DesignTimeRectangle="646, 463, 195, 23" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;strong' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='STRONG' class='' /&gt;" Guid="575715f6-471b-4250-a795-5daa24495a97" InformativeScreenshot="3f7cd6b8934efedf73b0e404b44063eb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='서울의 날씨 : 네이버 검색' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="377c0d44-af76-483b-9efa-8c1657f89d3f" CvTextArea="455, 427, 53, 20" CvTextArgument="7l92" CvType="Text" DesignTimeRectangle="456, 426, 53, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;strong' isleaf='1' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='STRONG' class='provider _provider' aaname='기상청' check:innerText='기상청' /&gt;" Guid="5c8cf69b-c1f7-427d-8e1f-775a492d8c74" SearchSteps="Selector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
