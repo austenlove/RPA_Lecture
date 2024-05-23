@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_03_DT추출_네이버코스피" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1095,1910" sap2010:WorkflowViewState.IdRef="_03_DT추출_네이버코스피_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_03_DT추출_네이버코스피" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1095,2350" sap2010:WorkflowViewState.IdRef="_03_DT추출_네이버코스피_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -108,7 +108,13 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1. 네이버페이 증권(https://finance.naver.com/) 화면을 준비&#xA;2. 코스닥 거래상위 종목 테이블을 추출&#xA;3. 추출한 DT에서 빈 행 삭제&#xA;4. 가공 완료한 DT를 엑셀 파일로 저장" DisplayName="_03_DT추출_네이버코스닥" sap:VirtualizedContainerService.HintSize="574,1845" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="1. 네이버페이 증권(https://finance.naver.com/) 화면을 준비&#xA;2. 코스닥 거래상위 종목 테이블을 추출&#xA;3. 추출한 DT에서 빈 행 삭제&#xA;4. 가공 완료한 DT를 엑셀 파일로 저장" DisplayName="_03_DT추출_네이버코스닥" sap:VirtualizedContainerService.HintSize="574,2285" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="ExtractKosdaqDataTable" />
       <Variable x:TypeArguments="sd:DataTable" Name="FilteredKosdaqDT" />
@@ -120,20 +126,20 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="DT추출 | Sequence" sap:VirtualizedContainerService.HintSize="512,911" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="DT추출 | Sequence" sap:VirtualizedContainerService.HintSize="512,1408" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 네이버페이 증권" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="53a9568d-6be4-4b04-95e7-2000f6cc4835" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: 네이버페이 증권" sap:VirtualizedContainerService.HintSize="450,554" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="53a9568d-6be4-4b04-95e7-2000f6cc4835" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,22" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,305" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
               </Sequence.Variables>
@@ -143,7 +149,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TOP 종목'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="53a9568d-6be4-4b04-95e7-2000f6cc4835" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'TOP 종목'" sap:VirtualizedContainerService.HintSize="354,218" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="53a9568d-6be4-4b04-95e7-2000f6cc4835" Version="V3">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="https://finance.naver.com/" CVScreenId="27568945-2eba-4e6f-b068-137104b3ca42" CvTextArea="802, 424, 30, 13" CvTextArgument="4571" CvType="Text" DesignTimeRectangle="797, 423, 38, 15" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl idx='2' parentid='content' tag='EM' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='content' tag='EM' class='btn_more4' aaname='' check:innerText='거래상위 더보기' /&gt;" Guid="403e9484-fbed-469b-a1b8-f4278169ac1d" InformativeScreenshot="b90ac760a0cc00ce8d79998bb7061a40.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='네이버페이 증권' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -172,7 +178,7 @@
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -261,7 +267,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:FilterDataTable>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="방법1. 워크북에 직접&#xA;Write Range Workbook&#xA;&#xA;방법2. 엑셀 스코프 사용 (클래식)&#xA;Excel Application Scope &gt; Write Range&#xA;&#xA;방법3. 엑셀 스코프 사용 (모던)&#xA;Excel Process Scope &gt; Use Excel File &gt; Write DataTable to Excel" DisplayName="DT기록 | Sequence" sap:VirtualizedContainerService.HintSize="512,439" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="방법1. 워크북에 직접&#xA;Write Range Workbook&#xA;&#xA;방법2. 엑셀 스코프 사용 (클래식)&#xA;Excel Application Scope &gt; Write Range&#xA;&#xA;방법3. 엑셀 스코프 사용 (모던)&#xA;Excel Process Scope &gt; Use Excel File &gt; Write DataTable to Excel" DisplayName="DT기록 | Sequence" sap:VirtualizedContainerService.HintSize="512,382" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="cell" />
       </Sequence.Variables>
@@ -272,24 +278,6 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_7">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:WriteCell Cell="A1:Z30" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="354,139" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="코스피" Text="[cell]" WorkbookPath="네이버증권.xlsx" />
-          </Sequence>
-        </ui:CommentOut.Body>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:CommentOut>
       <ui:WriteRange AddHeaders="True" DataTable="[FilteredKosdaqDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[&quot;필터된 코스닥&quot; + Now.ToString(&quot;hhmmss&quot;)]" StartingCell="A1" WorkbookPath="네이버증권.xlsx" />
     </Sequence>
   </Sequence>
