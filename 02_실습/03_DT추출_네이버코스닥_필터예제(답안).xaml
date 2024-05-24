@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_03_DT추출_네이버코스피" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="996,4462" sap2010:WorkflowViewState.IdRef="_03_DT추출_네이버코스피_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_03_DT추출_네이버코스피" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1026,5109" sap2010:WorkflowViewState.IdRef="_03_DT추출_네이버코스피_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -133,7 +133,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;네이버페이 증권에서 &quot;코스닥&quot; 거래상위 종목을 추출하여 엑셀 파일로 저장&gt;&#xA;&#xA;1. 네이버페이 증권(https://finance.naver.com/) 화면을 준비&#xA;2. 코스닥 거래상위 종목 테이블을 추출&#xA;3. 추출한 DT에서 빈 행 삭제&#xA;4. 가공 완료한 DT를 엑셀 파일로 저장&#xA;&#xA;- 파일명 : 네이버증권.xlsx&#xA;- 시트명 : 코스닥_가공완료&#xA;&#xA;&lt;조건&gt;&#xA;1. 빈 행은 삭제할 것&#xA;2. 출력할 컬럼 : 종목명, 현재가, 전일비, 등락률, 거래량&#xA;3. 행 필터링 : 매수호가&gt;10000원 행 유지" DisplayName="_03_DT추출_네이버코스닥_필터예제" sap:VirtualizedContainerService.HintSize="750,4397" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;네이버페이 증권에서 &quot;코스닥&quot; 거래상위 종목을 추출하여 엑셀 파일로 저장&gt;&#xA;&#xA;1. 네이버페이 증권(https://finance.naver.com/) 화면을 준비&#xA;2. 코스닥 거래상위 종목 테이블을 추출&#xA;3. 추출한 DT에서 빈 행 삭제&#xA;4. 가공 완료한 DT를 엑셀 파일로 저장&#xA;&#xA;- 파일명 : 네이버증권.xlsx&#xA;- 시트명 : 코스닥_가공완료&#xA;&#xA;&lt;조건&gt;&#xA;1. 빈 행은 삭제할 것&#xA;2. 출력할 컬럼 : 종목명, 현재가, 전일비, 등락률, 거래량&#xA;3. 행 필터링 : 매수호가&gt;10000원 행 유지" DisplayName="_03_DT추출_네이버코스닥_필터예제" sap:VirtualizedContainerService.HintSize="750,5044" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="DT코스닥_원본" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="DT코스닥_필터" />
@@ -353,7 +353,7 @@
       </ui:ForEachRow>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;❤️❤DT가공 종료❤️❤️&quot;]" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="방법1. 워크북에 직접&#xA;Write Range Workbook&#xA;&#xA;방법2. 엑셀 스코프 사용 (클래식)&#xA;Excel Application Scope &gt; Write Range&#xA;&#xA;방법3. 엑셀 스코프 사용 (모던)&#xA;Excel Process Scope &gt; Use Excel File &gt; Write DataTable to Excel" DisplayName="DT기록 | Sequence" sap:VirtualizedContainerService.HintSize="688,1556" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="방법1. 워크북에 직접&#xA;Write Range Workbook&#xA;&#xA;방법2. 엑셀 스코프 사용 (클래식)&#xA;Excel Application Scope &gt; Write Range&#xA;&#xA;방법3. 엑셀 스코프 사용 (모던)&#xA;Excel Process Scope &gt; Use Excel File &gt; Write DataTable to Excel" DisplayName="DT기록 | Sequence" sap:VirtualizedContainerService.HintSize="688,2203" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:WorkbookApplication" Name="workbook" />
       </Sequence.Variables>
@@ -364,15 +364,15 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="626,275" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="626,922" sap2010:WorkflowViewState.IdRef="CommentOut_3">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="416,164" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="512,811" sap2010:WorkflowViewState.IdRef="Sequence_28">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="결과물 출력 방법 2 | Excel Application Scope" sap:VirtualizedContainerService.HintSize="354,79" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" Workbook="[workbook]" WorkbookPath="네이버증권.xlsx">
+            <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="결과물 출력 방법 2 | Excel Application Scope" sap:VirtualizedContainerService.HintSize="450,726" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" Workbook="[workbook]" WorkbookPath="네이버증권.xlsx">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
@@ -400,8 +400,8 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelApplicationScope>
