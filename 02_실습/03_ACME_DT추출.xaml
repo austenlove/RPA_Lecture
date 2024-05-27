@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_03_ACME_DT추출" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1008,2457" sap2010:WorkflowViewState.IdRef="_03_ACME_DT추출_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_03_ACME_DT추출" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1146,2326" sap2010:WorkflowViewState.IdRef="_03_ACME_DT추출_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -105,7 +105,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;ACME : Work Items 페이지 DT 추출하기&gt;&#xD;&#xA;Work Items DT를 추출하여 필터링 후, 컬럼을 추가한다.&#xD;&#xA;&#xD;&#xA;- 파일명 : ACME.xlsx&#xD;&#xA;- 시트명(원본데이터) : WI_원본&#xD;&#xA;- 시트명(가공데이터) : WI_가공&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;필터링 조건&gt;&#xD;&#xA;1. 행 필터링 : 아래의 두 조건을 만족하는 두 행을 남길 것&#xD;&#xA; - Type == WI5&#xD;&#xA; - Status == Open&#xD;&#xA;&#xD;&#xA;2. 열 필터링 : Date 컬럼 삭제&#xD;&#xA;&#xD;&#xA;3. 컬럼 추가 : Client ID, Client Name, Client Country" DisplayName="_03_ACME_DT추출" sap:VirtualizedContainerService.HintSize="574,2392" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;ACME : Work Items 페이지 DT 추출하기&gt;&#xD;&#xA;Work Items DT를 추출하여 필터링 후, 컬럼을 추가한다.&#xD;&#xA;&#xD;&#xA;- 파일명 : ACME.xlsx&#xD;&#xA;- 시트명(원본데이터) : WI_원본&#xD;&#xA;- 시트명(가공데이터) : WI_가공&#xD;&#xA;&#xD;&#xA;&lt;필터링 조건&gt;&#xD;&#xA;1. 행 필터링 : 아래의 두 조건을 만족하는 두 행을 남길 것&#xD;&#xA; - Type == WI5&#xD;&#xA; - Status == Open&#xD;&#xA;&#xD;&#xA;2. 열 필터링 : Date 컬럼 삭제&#xD;&#xA;&#xD;&#xA;3. 컬럼 추가 : Client ID, Client Name, Client Country" DisplayName="_03_ACME_DT추출" sap:VirtualizedContainerService.HintSize="574,2261" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="WI_원본" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="WI_가공" />
@@ -189,6 +189,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -209,6 +210,7 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="[currentColumn]" DataTable="[WI_가공]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
@@ -232,10 +234,10 @@
       <ui:WriteRange AddHeaders="True" DataTable="[WI_원본]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="WI_원본" StartingCell="A1" WorkbookPath="ACME.xlsx" />
       <ui:WriteRange AddHeaders="True" DataTable="[WI_가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="WI_가공" StartingCell="A1" WorkbookPath="ACME.xlsx" />
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;❤️❤ACME DT추출 종료❤️❤️&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;❤️❤ACME DT추출 종료❤️❤️&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
