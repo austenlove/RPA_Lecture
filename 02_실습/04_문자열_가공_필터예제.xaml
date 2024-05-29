@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_04_문자열_가공_필터예제" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="838.3999999999999,4186.4" sap2010:WorkflowViewState.IdRef="_04_문자열_가공_필터예제_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_04_문자열_가공_필터예제" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="838.3999999999999,4188" sap2010:WorkflowViewState.IdRef="_04_문자열_가공_필터예제_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -111,7 +111,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;네이버 쇼핑&gt;&#xA;문자열을 가공하여, 각각의 검색어에 대해 데이터를 추출하여 시트에 기록할 것&#xA;&#xA;str검색어 = &quot;모니터, 냉장고, 세탁기 &quot;&#xA;&#xA; - 파일명 : 네이버 쇼핑.xlsx&#xA; - 시트명 : 모니터_원본, 모니터_가공, 냉장고_원본, 냉장고_가공, 세탁기_원본, 세탁기_가공&#xA;&#xA;1. 네이버 쇼핑(https://shopping.naver.com/)에서 검색어를 검색하여 DT 추출&#xA; - 각각의 원본 데이터는 30개 이상일 것&#xA; - 컬럼명 : 상품명, 상품명_URL, 가격&#xA;&#xA;2. 아래의 조건에 따라 필터링 (Filter Data Table 금지)&#xA; - 가격 : 500000 이상인 것을 남길 것&#xA; - 상품명에 &quot;LG&quot;가 포함된 상품만 남길 것" DisplayName="_04_문자열_가공_필터예제" sap:VirtualizedContainerService.HintSize="766.4,4121.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;네이버 쇼핑&gt;&#xA;문자열을 가공하여, 각각의 검색어에 대해 데이터를 추출하여 시트에 기록할 것&#xA;&#xA;str검색어 = &quot;모니터, 냉장고, 세탁기 &quot;&#xA;&#xA; - 파일명 : 네이버 쇼핑.xlsx&#xA; - 시트명 : 모니터_원본, 모니터_가공, 냉장고_원본, 냉장고_가공, 세탁기_원본, 세탁기_가공&#xA;&#xA;1. 네이버 쇼핑(https://shopping.naver.com/)에서 검색어를 검색하여 DT 추출&#xA; - 각각의 원본 데이터는 30개 이상일 것&#xA; - 컬럼명 : 상품명, 상품명_URL, 가격&#xA;&#xA;2. 아래의 조건에 따라 필터링 (Filter Data Table 금지)&#xA; - 가격 : 500000 이상인 것을 남길 것&#xA; - 상품명에 &quot;LG&quot;가 포함된 상품만 남길 것" DisplayName="_04_문자열_가공_필터예제" sap:VirtualizedContainerService.HintSize="766.4,4123.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str검색어" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="모니터_원본" />
@@ -308,7 +308,7 @@
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:AddDataRow DataRow="{x:Null}" DataTable="{x:Null}" sap2010:Annotation.AnnotationText="Add Data Row를 사용하여 다른 테이블에 속해 있는 행을 추가하는 경우&#xA;-&gt; CurrentRow.ItemArray를 사용하여 새로운 데이터 행을 생성하고 이를 새로운 데이터 테이블에 추가" ArrayRow="[CurrentRow.ItemArray]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="353.6,287.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                            <ui:AddDataRow DataRow="{x:Null}" sap2010:Annotation.AnnotationText="Add Data Row를 사용하여 다른 테이블에 속해 있는 행을 추가하는 경우&#xA;-&gt; CurrentRow.ItemArray를 사용하여 새로운 데이터 행을 생성하고 이를 새로운 데이터 테이블에 추가" ArrayRow="[CurrentRow.ItemArray]" DataTable="[arrDT가공(idx가공)]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="353.6,287.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -361,11 +361,11 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:WriteRange AddHeaders="False" DataTable="[모니터_가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="모니터_가공" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
-      <ui:WriteRange AddHeaders="False" DataTable="[냉장고_가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="냉장고_가공" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
-      <ui:WriteRange AddHeaders="False" DataTable="[세탁기_가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="세탁기_가공" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
+      <ui:WriteRange AddHeaders="False" DataTable="[모니터_가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="모니터_가공" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
+      <ui:WriteRange AddHeaders="False" DataTable="[냉장고_가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="냉장고_가공" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
+      <ui:WriteRange AddHeaders="False" DataTable="[세탁기_가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="세탁기_가공" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="688,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;❤️❤네이버쇼핑 DT추출 종료❤️❤️&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="704,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;❤️❤네이버쇼핑 DT추출 종료❤️❤️&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
