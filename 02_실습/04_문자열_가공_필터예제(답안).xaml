@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_04_문자열_가공_필터예제_답안_" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1254,1219" sap2010:WorkflowViewState.IdRef="_04_문자열_가공_필터예제_답안__1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_04_문자열_가공_필터예제_답안_" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1254,1942.0000000000002" sap2010:WorkflowViewState.IdRef="_04_문자열_가공_필터예제_답안__1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -44,6 +44,7 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,14 +107,13 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
-      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;네이버 쇼핑&gt;&#xA;문자열을 가공하여, 각각의 검색어에 대해 데이터를 추출하여 시트에 기록할 것&#xA;&#xA;str검색어 = &quot;모니터, 냉장고, 세탁기 &quot;&#xA;&#xA; - 파일명 : 네이버 쇼핑.xlsx&#xA; - 시트명 : 모니터_원본, 모니터_가공, 냉장고_원본, 냉장고_가공, 세탁기_원본, 세탁기_가공&#xA;&#xA;1. 네이버 쇼핑(https://shopping.naver.com/)에서 검색어를 검색하여 DT 추출&#xA; - 각각의 원본 데이터는 30개 이상일 것&#xA; - 컬럼명 : 상품명, 상품명_URL, 가격&#xA;&#xA;2. 아래의 조건에 따라 필터링 (Filter Data Table 금지)&#xA; - 가격 : 500000 이상인 것을 남길 것&#xA; - 상품명에 &quot;LG&quot;가 포함된 상품만 남길 것" DisplayName="_04_문자열_가공_필터예제_답안_" sap:VirtualizedContainerService.HintSize="558,1154" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;네이버 쇼핑&gt;&#xA;문자열을 가공하여, 각각의 검색어에 대해 데이터를 추출하여 시트에 기록할 것&#xA;&#xA;str검색어 = &quot;모니터, 냉장고, 세탁기 &quot;&#xA;&#xA; - 파일명 : 네이버 쇼핑.xlsx&#xA; - 시트명 : 모니터_원본, 모니터_가공, 냉장고_원본, 냉장고_가공, 세탁기_원본, 세탁기_가공&#xA;&#xA;1. 네이버 쇼핑(https://shopping.naver.com/)에서 검색어를 검색하여 DT 추출&#xA; - 각각의 원본 데이터는 30개 이상일 것&#xA; - 컬럼명 : 상품명, 상품명_URL, 가격&#xA;&#xA;2. 아래의 조건에 따라 필터링 (Filter Data Table 금지)&#xA; - 가격 : 500000 이상인 것을 남길 것&#xA; - 상품명에 &quot;LG&quot;가 포함된 상품만 남길 것" DisplayName="_04_문자열_가공_필터예제_답안_" sap:VirtualizedContainerService.HintSize="699,1877" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="list검색어" />
       <Variable x:TypeArguments="x:String" Name="str검색어" />
@@ -124,8 +124,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;❤️❤네이버쇼핑 DT추출 시작❤️❤️&quot;]" />
-    <Sequence DisplayName="Init | Sequence" sap:VirtualizedContainerService.HintSize="496,341" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="637,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;❤️❤네이버쇼핑 DT추출 시작❤️❤️&quot;]" />
+    <Sequence DisplayName="Init | Sequence" sap:VirtualizedContainerService.HintSize="637,341" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,21 +148,21 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="1. 네이버 쇼핑(https://shopping.naver.com/)에서 검색어를 검색하여 DT 추출&#xA; - 각각의 원본 데이터는 30개 이상일 것&#xA; - 컬럼명 : 상품명, 상품명_URL, 가격" DisplayName="DT추출 및 가공 | Sequence" sap:VirtualizedContainerService.HintSize="496,133" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="1. 네이버 쇼핑(https://shopping.naver.com/)에서 검색어를 검색하여 DT 추출&#xA; - 각각의 원본 데이터는 30개 이상일 것&#xA; - 컬럼명 : 상품명, 상품명_URL, 가격" DisplayName="DT추출 및 가공 | Sequence" sap:VirtualizedContainerService.HintSize="637,856" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="DT 추출 및 가공 | For Each" sap:VirtualizedContainerService.HintSize="608,1220" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list검색어]">
+      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="DT 추출 및 가공 | For Each" sap:VirtualizedContainerService.HintSize="575,676" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list검색어]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="current검색어" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="574,1031" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="541,487" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="DT원본" />
                 <Variable x:TypeArguments="sd:DataTable" Name="DT가공" />
@@ -172,7 +172,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MultipleAssign DisplayName="반복문 내 변수 초기화 | Multiple Assign" sap:VirtualizedContainerService.HintSize="512,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign DisplayName="반복문 내 변수 초기화 | Multiple Assign" sap:VirtualizedContainerService.HintSize="479,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -194,7 +194,7 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <Sequence DisplayName="DT 원본 추출 | Sequence" sap:VirtualizedContainerService.HintSize="512,57" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="DT 원본 추출 | Sequence" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -288,45 +288,61 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NApplicationCard>
               </Sequence>
-              <Sequence sap2010:Annotation.AnnotationText="2. 아래의 조건에 따라 필터링 (Filter Data Table 금지)&#xA; - 가격 : 500000 이상인 것을 남길 것&#xA; - 상품명에 &quot;LG&quot;가 포함된 상품만 남길 것" DisplayName="DT 가공 | Sequence" sap:VirtualizedContainerService.HintSize="512,661" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap2010:Annotation.AnnotationText="2. 아래의 조건에 따라 필터링 (Filter Data Table 금지)&#xA; - 가격 : 500000 이상인 것을 남길 것&#xA; - 상품명에 &quot;LG&quot;가 포함된 상품만 남길 것" DisplayName="DT 가공 | Sequence" sap:VirtualizedContainerService.HintSize="479,117" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[Convert.ToInt32(CurrentRow(&quot;가격&quot;)) &gt; 500000 And CurrentRow(&quot;상품명&quot;).ToString.Contains(&quot;LG&quot;)]" sap:VirtualizedContainerService.HintSize="450,481" sap2010:WorkflowViewState.IdRef="If_1">
-                  <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;상품명&quot;), CurrentRow(&quot;상품명_URL&quot;), CurrentRow(&quot;가격&quot;)}&#xD;&#xA;currentRow.ItemArray]" DataTable="[DT가공]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,212" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                    </Sequence>
-                  </If.Then>
-                  <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,22" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </Sequence>
-                  </If.Else>
-                </If>
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT원본]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,755" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="512,566" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If Condition="[Convert.ToInt32(CurrentRow(&quot;가격&quot;)) &gt; 500000 And CurrentRow(&quot;상품명&quot;).ToString.Contains(&quot;LG&quot;)]" sap:VirtualizedContainerService.HintSize="450,481" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;상품명&quot;), CurrentRow(&quot;상품명_URL&quot;), CurrentRow(&quot;가격&quot;)}]" DataTable="[DT가공]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,212" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,22" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
               </Sequence>
-              <Sequence DisplayName="엑셀 기록 | Sequence" sap:VirtualizedContainerService.HintSize="512,48" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence DisplayName="엑셀 기록 | Sequence" sap:VirtualizedContainerService.HintSize="479,48" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:WriteRange AddHeaders="True" DataTable="[DT가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" SheetName="[current검색어.ToString + &quot;_가공&quot;]" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
+                <ui:WriteRange AddHeaders="True" DataTable="[DT가공]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[current검색어.ToString + &quot;_가공&quot;]" StartingCell="A1" WorkbookPath="네이버 쇼핑.xlsx" />
               </Sequence>
             </Sequence>
           </ActivityAction>
@@ -339,7 +355,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;❤️❤네이버쇼핑 DT추출 종료❤️❤️&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="637,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;❤️❤네이버쇼핑 DT추출 종료❤️❤️&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
