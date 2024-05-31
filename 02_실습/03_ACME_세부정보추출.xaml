@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_03_ACME_세부정보추출" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1624,1836" sap2010:WorkflowViewState.IdRef="_03_ACME_세부정보추출_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_03_ACME_세부정보추출" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1049,2914" sap2010:WorkflowViewState.IdRef="_03_ACME_세부정보추출_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -114,7 +114,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="&lt;04. ACME Client 세부정보 추출&gt;&#xA;ACME Work Items 페이지에서 돋보기를 누르면 나오는 페이지에서 3개의 정보를 추출하여, DT에 채워 넣는다.&#xA;&#xA; - Client ID&#xA; - Client Name&#xA; - Client Address" DisplayName="_03_ACME_세부정보추출" sap:VirtualizedContainerService.HintSize="574,1771" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&lt;04. ACME Client 세부정보 추출&gt;&#xA;ACME Work Items 페이지에서 돋보기를 누르면 나오는 페이지에서 3개의 정보를 추출하여, DT에 채워 넣는다.&#xA;&#xA; - Client ID&#xA; - Client Name&#xA; - Client Address" DisplayName="_03_ACME_세부정보추출" sap:VirtualizedContainerService.HintSize="891,2849" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="DTWorkItems" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)()]" Name="listWIID" />
@@ -125,7 +125,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;❤️❤ACME DT추출 시작❤️❤️&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="829,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;❤️❤ACME DT추출 시작❤️❤️&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,21 +133,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence DisplayName="Init | Sequence" sap:VirtualizedContainerService.HintSize="512,376" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence DisplayName="Init | Sequence" sap:VirtualizedContainerService.HintSize="829,262" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_7">
-        <Assign.To>
-          <OutArgument x:TypeArguments="sd:DataTable">[DTWorkItems]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="sd:DataTable">[new System.Data.DataTable]</InArgument>
-        </Assign.Value>
-      </Assign>
-      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="DTWorkItems에 저장" DataTable="[DTWorkItems]" DisplayName="엑셀 데이터 읽기 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="434,142" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="WI_가공" WorkbookPath="ACME_실습2.xlsx">
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="DTWorkItems에 저장" DataTable="[DTWorkItems]" DisplayName="엑셀 데이터 읽기 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,142" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="WI_가공" WorkbookPath="ACME_실습2.xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -155,20 +148,20 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
     </Sequence>
-    <Sequence DisplayName="조건에 맞는 DT 추출 | Sequence" sap:VirtualizedContainerService.HintSize="512,594" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="조건에 맞는 DT 추출 | Sequence" sap:VirtualizedContainerService.HintSize="829,1801" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="450,474" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="ef93edf0-06da-476b-8c5c-bc415436ec2a" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="767,1681" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="ef93edf0-06da-476b-8c5c-bc415436ec2a" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="실행" sap:VirtualizedContainerService.HintSize="733,1441" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="idx" />
               </Sequence.Variables>
@@ -177,68 +170,22 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DTWorkItems]" DisplayName="WIID열 list 만들기 | For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[idx]" DataTable="[DTWorkItems]" DisplayName="WIID에 따른 세부정보 추출 및 저장 | For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="671,1354" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence sap2010:Annotation.AnnotationText="DTWorkItems 테이블 안의 WIID 열을 list로 추출" DisplayName="본문" sap:VirtualizedContainerService.HintSize="496,389" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="WIID" />
-                      </Sequence.Variables>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_4">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[WIID]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[CurrentRow("WIID").ToString]</InArgument>
-                        </Assign.Value>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Assign>
-                      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Add">
-                        <InvokeMethod.TargetObject>
-                          <InArgument x:TypeArguments="scg:List(x:String)">[listWIID]</InArgument>
-                        </InvokeMethod.TargetObject>
-                        <InArgument x:TypeArguments="x:String">[WIID]</InArgument>
-                      </InvokeMethod>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:ForEachRow.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:ForEachRow>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[idx]" DataTable="[DTWorkItems]" DisplayName="WIID에 따른 세부정보 추출 및 저장 | For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="354,50" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                <ui:ForEachRow.Body>
-                  <ActivityAction x:TypeArguments="sd:DataRow">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="637,1064" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="본문" sap:VirtualizedContainerService.HintSize="637,1165" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[listWIID(idx) = CurrentRow(&quot;WIID&quot;).ToString]" sap:VirtualizedContainerService.HintSize="575,979" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If Condition="[Not String.IsNullOrEmpty(CurrentRow(&quot;WIID&quot;).ToString())]" sap:VirtualizedContainerService.HintSize="575,1080" sap2010:WorkflowViewState.IdRef="If_1">
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="541,796" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="541,897" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="str추출" />
                               <Variable x:TypeArguments="s:String[]" Name="arr추출" />
@@ -248,7 +195,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NGoToUrl sap2010:Annotation.AnnotationText="기존 URL 뒤에 /WIID 붙여서 추출할 페이지로 이동" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="479,145" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://acme-test.uipath.com/work-items/&quot; + listWIID(idx)]" Version="V3">
+                            <uix:NGoToUrl sap2010:Annotation.AnnotationText="기존 URL 뒤에 /WIID 붙여서 추출할 페이지로 이동" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="479,145" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://acme-test.uipath.com/work-items/&quot; + CurrentRow(&quot;WIID&quot;).ToString()]" Version="V3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -266,7 +213,7 @@
                                 </uix:TargetAnchorable>
                               </uix:NGetText.Target>
                             </uix:NGetText>
-                            <Assign sap2010:Annotation.AnnotationText="정규식으로 추출한 텍스트 가공" sap:VirtualizedContainerService.HintSize="479,145" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign sap2010:Annotation.AnnotationText="정규식으로 추출한 텍스트 가공&#xD;&#xA;&#xD;&#xA;alt2&#xD;&#xA;str추출.Split(Environment.NewLline.ToArray, StringSplitOptions.None).ToList&#xD;&#xA;&#xD;&#xA;alt3&#xD;&#xA;str추출.Split(vblf)" sap:VirtualizedContainerService.HintSize="479,246" sap2010:WorkflowViewState.IdRef="Assign_6">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="s:String[]">[arr추출]</OutArgument>
                               </Assign.To>
@@ -276,6 +223,8 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
@@ -311,6 +260,8 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:MultipleAssign>
@@ -332,7 +283,7 @@
                 </ui:ForEachRow.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -345,15 +296,16 @@
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
     </Sequence>
-    <Sequence DisplayName="DT 기록 | Sequence" sap:VirtualizedContainerService.HintSize="512,259" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence DisplayName="DT 기록 | Sequence" sap:VirtualizedContainerService.HintSize="829,259" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DTWorkItems]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="WI_가공_세부" WorkbookPath="ACME_실습2.xlsx" />
+      <ui:WriteRange AddHeaders="True" DataTable="[DTWorkItems]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="WI_가공_세부" StartingCell="A1" WorkbookPath="ACME_실습2.xlsx" />
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;❤️❤ACME DT추출 종료❤️❤️&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="829,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;❤️❤ACME DT추출 종료❤️❤️&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
