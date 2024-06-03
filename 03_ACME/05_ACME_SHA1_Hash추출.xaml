@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="_04_ACME_SHA1_Hash추출" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1061,2667" sap2010:WorkflowViewState.IdRef="_04_ACME_SHA1_Hash추출_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="_04_ACME_SHA1_Hash추출" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_DTWorkItems" Type="InOutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1024,2667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>_04_ACME_SHA1_Hash추출_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -111,7 +119,6 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="sha1-online 사이트에서 Type이 [WI5]인 항목의 해시코드를 만들고, 추출하여  DT에 업데이트 한다.&#xA;(http://www.sha1-online.com/)" DisplayName="_04_ACME_SHA1_Hash추출" sap:VirtualizedContainerService.HintSize="750,2602" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="DTWorkItems" />
       <Variable x:TypeArguments="x:String" Name="keyword" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -134,7 +141,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="DTWorkItems에 저장" DataTable="[DTWorkItems]" DisplayName="엑셀 데이터 읽기 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,142" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="WI_가공_세부" WorkbookPath="ACME_실습2.xlsx">
+      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="DTWorkItems에 저장" DataTable="[io_DTWorkItems]" DisplayName="엑셀 데이터 읽기 | Read Range Workbook" sap:VirtualizedContainerService.HintSize="388,142" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="WI_가공_세부" WorkbookPath="ACME.xlsx">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -142,7 +149,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
     </Sequence>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Hash 수집 | Use Browser Chrome: SHA1 online" sap:VirtualizedContainerService.HintSize="688,1614" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2c3c038-7b61-4010-a565-c9d194f294f0" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Hash 수집 | Use Browser Chrome: SHA1 online" sap:VirtualizedContainerService.HintSize="688,1614" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2c3c038-7b61-4010-a565-c9d194f294f0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -157,7 +164,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="행별로 keyword 만들어서 hash 수집" CurrentIndex="[idx]" DataTable="[DTWorkItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,1278" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+            <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="행별로 keyword 만들어서 hash 수집" CurrentIndex="[idx]" DataTable="[io_DTWorkItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,1278" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
@@ -308,7 +315,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:WriteRange AddHeaders="True" DataTable="[DTWorkItems]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="WI_가공_세부" StartingCell="A1" WorkbookPath="ACME_실습2.xlsx" />
+      <ui:WriteRange AddHeaders="True" DataTable="[io_DTWorkItems]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="WI_가공_세부" StartingCell="A1" WorkbookPath="ACME.xlsx" />
     </Sequence>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="688,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;❤️❤ACME DT추출 종료❤️❤️&quot;]">
       <sap:WorkflowViewStateService.ViewState>
