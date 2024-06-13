@@ -1,0 +1,1 @@
+<div><span style="font-family: &quot;Malgun Gothic&quot;, &quot;맑은 고딕&quot;, sans-serif;">1. init 단계에서 copy file, move file을 활용하여 원본, 작업, 결과 순으로 폴더링 / RPA repository 구조 참고</span></div><div><br></div>
